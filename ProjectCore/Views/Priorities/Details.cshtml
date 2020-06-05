@@ -1,0 +1,40 @@
+﻿@model ProjectCore.DAL.Models.Priorities
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details Priorities</h1>
+
+<div>
+
+    <hr />
+    <table class="table-bordered">
+        <tr>
+            <td class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </td>
+            <td class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Active)
+            </td>
+        </tr>
+        <tr>
+            <td class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </td>
+
+            <td class="col-sm-10">
+                @Html.DisplayFor(model => model.Active)
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+
+
+    @Html.ActionLink(" ", "Edit", "Priorities", new { id = Model.Id }, new { @class = "btn btn-primary fas fa-edit" })
+    @Html.ActionLink(" ", "Index", "Priorities", null, new { @class = "btn btn-primary fas fa-undo-alt" })
+
+
+
+</div>
